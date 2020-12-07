@@ -60,9 +60,9 @@
                 @Html.DisplayFor(modelItem => item.Telefone)
             </td>
             <td>
-                @Html.ActionLink("Editar", "Edit", new { id=item.Codigo }) |
-                @Html.ActionLink("Detalhar", "Details", new { id=item.Codigo }) |
-                @Html.ActionLink("Excluir", "Delete", new { id=item.Codigo })
+                @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Detalhar", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Excluir", "Delete", new { id=item.Id })
             </td>
         </tr>
     }

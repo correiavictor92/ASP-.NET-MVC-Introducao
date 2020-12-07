@@ -28,8 +28,6 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult Create(PessoaModels model)
         {
-            ModelState.Remove("Codigo");
-
             List<PessoaModels> lista = new List<PessoaModels>();
 
             if (ModelState.IsValid)
@@ -45,7 +43,10 @@ namespace WebApplication1.Controllers
                 Session["ListaPessoas"] = lista;
             }
             else
+            {
                 return View(model);
+            }
+                
             return View("List", lista);
         }
 
